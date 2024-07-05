@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>04a Technique</title>
+</head>
+<body>
+<h1 id="Header1">Webpage Dynamics L2: Javascript Arrays</h1>
+<h3>...an introduction to arrays:</h3>
+<p id="ArrayTarget1">This text will be replaced អត្ថបទនេះនឹងត្រូវបានជំនួស</p>
+<form>
+	<input type="button" value="click for myFunction1" onclick="ArrayOut1()"/>
+	<input type="button" value="click for myFunction2" onclick="ArrayOut2()"/>
+</form>
+<h3>...an introduction to increenting and decrementing:</h3>
+<p id="ArrayTarget2">This text will be changed by incrementing or decrementing</p>
+<form>
+	<input type="button" value="click to increment MyVariable2" onclick="ArrayOut3()" />
+	<input type="button" value="click to decrement MyVariable2" onclick="ArrayOut4()"/>
+</form>
+<script>
+	var MyArray1=new Array(117,5,78);
+	var MyArray2=new Array("yellow","green","purple","blue","lime","teal");
+	var MyVariable=document.getElementById('ArrayTarget1');
+	function ArrayOut1(){
+		document.getElementById('Header1').style.color="red";
+		MyVariable.innerHTML=
+		"MyArray1[0]" +"="+MyArray1[0] + "<br>"+
+		"MyArray1[1]" +"="+MyArray1[1] + "<br>" +
+		"MyArray1[2]"+ "="+ MyArray1[2] +"<br>"  
+	;}
+	function ArrayOut2(){
+		document.getElementById('Header1').style.color="blue";
+		MyVariable.innerHTML=
+		"MyArray2[0]" +"="+MyArray2[0] + "<br>"+
+		"MyArray2[1]" +"="+MyArray2[1] + "<br>" +
+		"MyArray2[2]"+ "="+ MyArray2[2] +"<br>"  +
+		"MyArray2[3]" +"="+MyArray2[3] + "<br>" +
+		"MyArray2[4]" +"="+MyArray2[4] + "<br>" +
+		"MyArray2[5]" +"="+MyArray2[5] + "<br>" 
+	;	}
+
+	var MyVariable2=0;
+	function ArrayOut3(){
+		MyVariable2++;
+		document.getElementById('ArrayTarget2').style.color=MyArray2[MyVariable2];
+		ArrayTarget2.innerHTML="MyArray2["+ MyVariable2+"]"+MyArray2[MyVariable2]+"<br>";
+
+	}
+	var MyVariable2=0;
+	function ArrayOut4(){
+		MyVariable2--;
+		document.getElementById('ArrayTarget2').style.color=MyArray2[MyVariable2];
+		ArrayTarget2.innerHTML="MyArray2["+ MyVariable2+"]"+MyArray2[MyVariable2]+"<br>";}
+</script>
+</body>
+</html>
